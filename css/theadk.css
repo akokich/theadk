@@ -1,0 +1,415 @@
+﻿html, body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+h1, h2
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+hr
+{
+     border: 0; 
+     height: 1px; 
+     width: 100%;
+     background-image: linear-gradient(to right, rgba(215, 211, 195, 0), rgba(215, 211, 195, 0.75), rgba(215, 211, 195, 0));
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.clear 
+{
+    clear:both;
+}
+
+.ps-scrollbar-y-rail
+{
+    z-index: 10;
+}
+
+
+#container
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#renderCanvas 
+{
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #afafaf;
+}
+
+#renderOverlay 
+{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#headerOverlay
+{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+.headerContent
+{
+    margin: auto;
+    background-color: #000000;
+    width: 100%;
+}
+
+.headerContent h1
+{
+    padding: 5px 0px 5px 10px;
+    margin: 0px;
+    color: #d7d3c3;
+}
+
+.headerLabel
+{
+    float: left; 
+    width: 25%; 
+    min-width: 10%;
+}
+
+.headerLabel h1
+{
+    color: #ffffff;
+}
+
+.headerMenu
+{
+    float:left; 
+    width: 70%;
+    padding: 0px 10px 0px 0px;
+}
+
+.highlightContainer
+{
+    width: 80%; margin: auto;
+}
+
+.highlightLabel
+{
+    padding: 200px 0px 200px 0px;
+}
+
+#contentHighlight
+{
+    text-align: center; 
+    position: fixed; 
+    width: 100%; 
+    margin: auto; 
+    color: #b6ad9f; 
+    font-size: 3vmin;
+}
+
+.menuItem, .menuItemHighlight
+{
+    color: #d7d3c3;
+    display: block;
+    float: right;
+
+    font-weight: bold;
+}
+
+.menuItem
+{
+    padding: 6px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.menuItem:hover
+{
+    color: #FFFFFF;
+    background-color: #004860;
+}
+
+.menuItemHighlight, .menuItemHighlightAlt, .menuItemHighlightTer
+{
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #d7d3c3;
+}
+
+.menuItemHighlight:hover, .menuItemHighlightAlt:hover
+{
+    color: #FFFFFF;
+    background-color: #004860;
+}
+
+.menuItemHighlightAlt
+{
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+
+.menuItemHighlightTer
+{
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.menuItemHighlightTer:hover
+{
+    color: #004860;
+    background-color: #d7d3c3;
+}
+
+.contentHeader
+{
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+}
+
+.contentDiv
+{
+    position:relative;
+
+    padding: 0px;
+    margin: auto;
+    
+    width: 100%;
+    height: 100%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contentBox
+{
+    color: #FFFFFF;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+}
+
+.contentIcon
+{
+    color: #d7d3c3; 
+    padding: 10px; 
+}
+
+contentIconAlt
+{
+    padding: 10px;
+}
+
+.contentEmpty
+{
+
+}
+
+.contentFilled, .contentFilledAlt, .contentFilledTer
+{
+    padding: 0px 0px 0px 5px;
+    background-color: #004860;
+}
+
+.contentFilledAlt
+{
+    background-color: #000000;
+}
+
+.contentFilledTer
+{
+    color: #000000;
+    background-color: #d7d3c3;
+}
+
+.contentParagraph
+{
+    text-align: center; 
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.columnContainer
+{
+    margin: auto; 
+    padding: 5px;
+}
+
+.columnSpacer {
+    float:left; 
+    width: 4%; 
+    overflow: hidden;
+}
+
+.column2Left
+{
+    float:left; 
+    width: 48%; 
+    text-align: right; 
+    overflow: hidden;
+}
+
+.column2Right
+{
+    float: left; 
+    vertical-align: middle; 
+    width: 48%; 
+    text-align: left; 
+    overflow: hidden;
+}
+
+.centerContainer
+{
+    width: 100%; 
+    text-align: center;
+}
+
+.bgGradientBlue
+{
+    background: -webkit-linear-gradient(bottom, rgba(0,72,96,0), rgba(0,72,96,1));
+    background: -o-linear-gradient(bottom, rgba(0,72,96,0), rgba(0,72,96,1)); 
+    background: -moz-linear-gradient(bottom, rgba(0,72,96,0), rgba(0,72,96,1)); 
+    background: linear-gradient(to bottom, rgba(0,72,96,0), rgba(0,72,96,1)); 
+}
+
+
+.bgGradientBlack
+{
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,1));
+    background: -o-linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)); 
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)); 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,1)); 
+}
+
+#footer
+{
+    color: #000000;
+    padding: 0px;
+    margin: 0px;
+    background-color: #d7d3c3;
+    width: 100%;
+    text-align:center;
+}
+
+#footer a:link
+{
+    color: #004860;
+    text-decoration: underline;
+}
+
+#footer a:visited
+{
+    color: #004860;
+    text-decoration: underline;
+}
+
+#footer a:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+#footer a:active
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pageBackground, .projectBackground, .whiteboardBackground
+{
+    position: fixed;
+    top: 0px;
+
+    max-width: 80%;
+    max-height: 60%;
+    width: 80%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.projectBackground
+{
+    min-height: 459px;
+    background: url('/img/projectphoto.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.resumeItem
+{
+    padding: 0px 0px 0px 10px;
+}
+
+.resumeContainer h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2em;
+}
+
+.resumeContainer h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.25em;
+}
+
+.resumeHeader
+{
+    float: left; 
+    width: 60%
+}
+
+.resumeContact
+{
+    float: left; 
+    width: 40%;
+}
+
+.resumeAddress
+{
+    float: left;
+    padding-right: 20px;
+}
+
+.resumeTitle
+{
+    font-style: italic;
+}
+
+.resumeCompany
+{
+    font-weight: bold;
+}
+
+.pageBreak
+{
+    page-break-after: always;
+}
