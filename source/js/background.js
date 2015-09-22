@@ -83,7 +83,7 @@ function planes (scene, material)
 
     animation[0].setKeys(upAniKeys);
     animation[1].setKeys(upAniKeys);
-    animation[2].setKeys(downAniKeys);
+    animation[2].setKeys(upAniKeys);
 
     mesh[0].animations.push(animation[0]);
     mesh[1].animations.push(animation[1]);

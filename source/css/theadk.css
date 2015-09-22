@@ -31,7 +31,7 @@ img {
 
 .clear 
 {
-    clear:both;
+    clear: both;
 }
 
 .ps-scrollbar-y-rail
@@ -252,7 +252,7 @@ contentIconAlt
 {
     text-align: center; 
     font-size: 1.5em;
-    padding: 10px;
+    padding: 0px 40px 0px 40px;
 }
 
 .columnContainer
@@ -317,6 +317,16 @@ contentIconAlt
     text-align:center;
 }
 
+.footerIcon
+{
+    padding: 0px 10px 0px 10px;
+}
+
+#footer a
+{
+    font-size: 1.5em;
+}
+
 #footer a:link
 {
     color: #004860;
@@ -366,7 +376,7 @@ contentIconAlt
 
 .resumeItem
 {
-    padding: 0px 0px 0px 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .resumeContainer h1 {

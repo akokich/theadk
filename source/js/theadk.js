@@ -39,9 +39,20 @@ function getPhrase ()
         "general purpose dork.",
         "full-stack developer.",
         "C#, Java, SQL, JS, HTML5/CSS.",
+        "20 years of web development experience.",
+        "agile.",
+        "genuine simulated musician.",
+        "fresh ideas brewed daily.",
+        "front end <--> back end"
     ];
 
     return phrases[Math.floor((Math.random() * phrases.length))];
+}
+
+function aboutSite ()
+{
+    $('#contentDiv').fadeOut(300, "swing", function () {
+    });
 }
 
 function router (html)
