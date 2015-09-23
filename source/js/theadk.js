@@ -20,8 +20,13 @@ $(document).ready(function () {
         }
     });
 
+    $('#footer').hide();
+
     $('#header').load('html/header.html');
     $('#footer').load('html/footer.html');
+
+
+
     handleResize();
 });
 
@@ -36,14 +41,13 @@ function getPhrase ()
 {
     var phrases = [
         "developer. creative. nerd.",
-        "general purpose dork.",
+        "general purpose geek.",
         "full-stack developer.",
-        "C#, Java, SQL, JS, HTML5/CSS.",
+        "C#, Java, SQL, JS, HTML5 / CSS.",
         "20 years of web development experience.",
         "agile.",
         "genuine simulated musician.",
-        "fresh ideas brewed daily.",
-        "front end <--> back end"
+        "industry standard."
     ];
 
     return phrases[Math.floor((Math.random() * phrases.length))];
@@ -57,6 +61,10 @@ function aboutSite ()
 
 function router (html)
 {
+
+    $('#footer').fadeOut(300, "swing");
+
+
     $('#contentDiv').fadeOut(300, "swing", function () {
         var url = location.hash.slice(1) || '/';
         
@@ -81,6 +89,9 @@ function router (html)
         }
 
         $('#contentDiv').fadeIn(150, "swing", function () {
+
+            $('#footer').show();
+
             $('#contentDiv').animate({ scrollTop: 0 }, 300);
             //$('#contentDiv').scrollTop(0);
         });

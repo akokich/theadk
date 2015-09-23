@@ -248,12 +248,18 @@ contentIconAlt
     background-color: #d7d3c3;
 }
 
-.contentParagraph
+.contentParagraph, .contentParagraphSmall
 {
     text-align: center; 
     font-size: 1.5em;
     padding: 0px 40px 0px 40px;
 }
+
+.contentParagraphSmall
+{
+    font-size: 1.25em;
+}
+
 
 .columnContainer
 {
@@ -351,7 +357,7 @@ contentIconAlt
     text-decoration: none;
 }
 
-.pageBackground, .projectBackground, .whiteboardBackground
+.pageBackground, .projectBackground, .whiteboardBackground, .partsBackground
 {
     position: fixed;
     top: 0px;
@@ -374,6 +380,15 @@ contentIconAlt
     background-size: cover;
 }
 
+.partsBackground
+{
+    min-height: 460px;
+    background: url('/img/parts.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .resumeItem
 {
     padding: 0px 10px 0px 10px;
