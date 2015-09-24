@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<!--
+    *
+    *
+
+            Hello there. If you would like to see the full source for this site please head to my GitHub page: https://github.com/akokich/theadk/tree/master/source
+
+    *
+    *
+     -->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Aaron Kokich: Developer. Creative. Nerd.</title>
@@ -17,8 +26,21 @@
 
     <script src="js/background.js"></script>
     <script src="js/theadk.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89023-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
-<body>
+<body id="indexBody">
 
     <div id="container">
         <canvas id="renderCanvas"></canvas>

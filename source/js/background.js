@@ -1,4 +1,12 @@
 ﻿window.addEventListener('DOMContentLoaded', function () {
+    var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+
+    if (!BABYLON.Engine.isSupported() || isMobile) {
+        console.log('background.js: webgl not supported - hiding canvas');
+        $('#renderCanvas').hide();
+        return;
+    }
+
     var canvas = document.getElementById("renderCanvas");
     var engine = new BABYLON.Engine(canvas, true);
 

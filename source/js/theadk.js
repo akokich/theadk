@@ -1,6 +1,8 @@
 ﻿var highlightEnabled = true;
 
 $(document).ready(function () {
+    $.ajaxSetup({ cache: false });  // prevent caching when using load
+
     //$('#renderOverlay').hide();           // for background debug
 
     $('#contentDiv').perfectScrollbar();
@@ -9,12 +11,17 @@ $(document).ready(function () {
     window.addEventListener('load', router);
 
     $("#contentDiv").bind('scroll', function () {
-        if (highlightEnabled) {
-            var offset = $('#contentDiv').scrollTop();
-            if (offset > 400) {
+        var offset = $('#contentDiv').scrollTop();
+        if (offset > 400) {
+            $('#headerImage').hide();
+
+            if (highlightEnabled) {
                 $('#contentHighlight').hide();
                 $('#highlightPhrase').text(getPhrase());
-            } else {
+            }
+        } else {
+            $('#headerImage').show();
+            if (highlightEnabled) {
                 $('#contentHighlight').show();
             }
         }
@@ -83,7 +90,7 @@ function router (html)
             $('#mainBody').load('html/' + url + '.html', function (response, status, xhr) {
                 if (status == "error") {
                     console.log("ERROR");
-                    $("#mainBody").html("<h1>Not found</h1><p>The page you request doesn't exist.</p>");
+                    $("#mainBody").html("<h1 style='color: red;'><b>This is not available</h1><p>You have attempted a route that hasn't yet be routed. Please find another route.</b><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>");
                 }
             });
         }
